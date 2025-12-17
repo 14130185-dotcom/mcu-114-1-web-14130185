@@ -1,4 +1,46 @@
+@use "../common";
+
 footer {
   border-top: 1px solid var(--border-color);
   height: 250px;
+  padding-block: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+
+  h3 {
+    margin: 0;
+    @include common.font-style(1.5rem, 500, 3rem);
+    color: var(--header-color);
+  }
+
+  nav {
+    display: var(--nav-display);
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  div {
+    &.icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &.copy-right {
+      color: var(--primary-color);
+    }
+  }
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
